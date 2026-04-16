@@ -1,0 +1,20 @@
+name: "Incluir comentários"
+description: "Inclui comentários em um pull request e issues"
+author: "Danilo S. Ferreira"
+inputs:
+  GITHUB_TOKEN:
+    description: "Token de acesso para autenticação com a API do GitHub"
+    required: true
+  issue-id:
+    description: "ID da issue ou pull request onde o comentário será incluído"
+    required: true
+  comment:
+    description: "Comentário a ser incluído"
+    required: true
+
+outputs:
+  comment-id:
+    description: "ID do comentário criado"
+runs:
+  using: "node20"
+  main: "dist/index.js"
